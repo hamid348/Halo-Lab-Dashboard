@@ -1,0 +1,368 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  margin-top: 70px;
+  max-width: 500px;
+}
+
+/* Robot Vacuum Container */
+.robot-vacuum-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+ 
+  width: 90%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+.robot-vacuum-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header-title h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1d1f23;
+}
+
+.header-title p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6e7380;
+}
+
+.toggle-switch {
+  position: relative;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  width: 40px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 50px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-switch label:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.toggle-switch input:checked + label {
+  background-color: #4caf50;
+}
+
+.toggle-switch input:checked + label:after {
+  transform: translateX(20px);
+}
+
+.robot-vacuum-content {
+  position: relative;
+  text-align: center;
+}
+
+.robot-image {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.status-box {
+  position: absolute;
+  top: 70%;
+  gap: 50px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.status-box.left {
+  left: 0%;
+top:0px;
+}
+
+.status-box.right {
+  right: 0%;
+  
+}
+
+.status-box span {
+  display: block;
+  color: #6e7380;
+  font-size: 0.8rem;
+}
+
+.room-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10;
+}
+
+.room-items {
+
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  padding: 0.7rem;
+  margin-bottom: 0.3rem;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-item1 span {
+  font-size: 0.8rem;
+  color: #6e7380;
+}
+
+.white-line {
+  position: absolute;
+  background-color: #ccc;
+}
+
+.white-line.vertical {
+  width: 2px;
+  height: 50px;
+}
+
+.white-line.horizontal {
+
+  height: 2px;
+  width: 50px;
+}
+
+.status-box.left::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background-color: #ccc;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.status-box.right::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background-color: #ccc;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robot-image::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background-color: #ccc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+.status-box.left::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #ccc;
+  top:  110px;
+  left: 50%;
+  transform: translateX(0%);
+}
+
+.status-box.right::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background-color: #ccc;
+  top: -40px;
+  right: 50%;
+  transform: translateX(0%);
+}
+.room-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;;
+  list-style: none;
+  padding: 0;
+  margin-top: 45px;
+}
+
+.room-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 40px;
+  background-color: #f0f1f5;
+  border-radius: 60px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 290px;
+}
+
+.room-items:hover {
+  background-color: #e0e1e7;
+}
+
+.icon-circle{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 40%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+.icon-circle img {
+  width: 15px;
+  height: 15px;
+  
+}
+.room-info {
+  text-align: center;
+}
+
+.room-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.room-devicess {
+  
+  font-size: 0.8rem;
+  color: #6e7380;
+}
+
+
+/* 2d */
+.main-containerd {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  
+  font-family: "Arial", sans-serif;
+
+  margin-top: 70px;
+  max-width: 100px;
+}
+
+/* Robot Vacuum Container */
+.robot-vacuum-containerd{
+  background-color: #A8ACB7;
+  border-radius: 16px;
+
+  height: 400px;
+  width: 215%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+.lamp-header {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top:  485px;
+  left: 735px;
+  z-index: 2;
+  color: rgb(243, 232, 232); 
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.lamp-header h4 {
+  color: rgb(243, 239, 239); 
+  font-size: 1rem;
+  margin: 0;
+}
+
+.lamp-header .lamp-dropdown {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Lamp Image */
+.lamp-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.lamp-image {
+  width: 140%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales proportionally */
+  /* Darkens the image for better text contrast */
+  position: absolute;
+  left:-40px;
+  z-index: 1; /* Ensures the image stays behind the text */
+}
+.lamp-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background-color:#B0B4BD;
+  padding: 20px;
+  border-radius: 30px;
+}
+/* Brightness Control */
+.lamp-slider {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.brightness-icon {
+  margin-right: 10px;
+}
+
+.brightness-range {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.brightness-percentage {
+  margin-left: 10px;
+}
+
+
+/* Lamp Image */
